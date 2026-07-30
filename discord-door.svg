@@ -1,0 +1,63 @@
+<svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .wall { fill: #1e2124; }
+    .door { fill: #5865F2; stroke: #40444b; stroke-width: 2; }
+    .doorknob { fill: #ffffff; }
+    .iconWrap { animation: moveIcon 6s linear infinite; }
+    .bubbleHola { opacity: 0; animation: showHola 6s linear infinite; }
+    .bubbleAdios { opacity: 0; animation: showAdios 6s linear infinite; }
+
+    @keyframes moveIcon {
+      0%   { transform: translate(20px, 0px) scale(1); opacity: 1; }
+      18%  { transform: translate(160px, 0px) scale(1); opacity: 1; }
+      28%  { transform: translate(190px, 0px) scale(0.15); opacity: 0; }
+      55%  { transform: translate(190px, 0px) scale(0.15); opacity: 0; }
+      65%  { transform: translate(215px, 0px) scale(1); opacity: 1; }
+      82%  { transform: translate(370px, 0px) scale(1); opacity: 1; }
+      100% { transform: translate(370px, 0px) scale(1); opacity: 1; }
+    }
+    @keyframes showHola {
+      0%   { opacity: 0; }
+      12%  { opacity: 0; }
+      18%  { opacity: 1; }
+      27%  { opacity: 1; }
+      32%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes showAdios {
+      0%   { opacity: 0; }
+      62%  { opacity: 0; }
+      68%  { opacity: 1; }
+      80%  { opacity: 1; }
+      86%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+  </style>
+
+  <rect class="wall" x="0" y="0" width="400" height="160"/>
+
+  <rect class="door" x="175" y="20" width="50" height="120" rx="4"/>
+  <circle class="doorknob" cx="215" cy="82" r="3"/>
+
+  <g class="bubbleHola">
+    <rect x="65" y="8" width="80" height="32" rx="12" fill="#ffffff"/>
+    <polygon points="100,40 108,40 100,50" fill="#ffffff"/>
+    <text x="105" y="29" font-size="15" text-anchor="middle" fill="#23272a" font-family="Arial, sans-serif" font-weight="bold">¡Hola!</text>
+  </g>
+
+  <g class="bubbleAdios">
+    <rect x="255" y="8" width="90" height="32" rx="12" fill="#ffffff"/>
+    <polygon points="300,40 308,40 300,50" fill="#ffffff"/>
+    <text x="300" y="29" font-size="15" text-anchor="middle" fill="#23272a" font-family="Arial, sans-serif" font-weight="bold">¡Adiós!</text>
+  </g>
+
+  <g transform="translate(0,90)">
+    <g class="iconWrap">
+      <circle cx="0" cy="0" r="18" fill="#5865F2"/>
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+      <circle cx="-6" cy="-2" r="3" fill="#ffffff"/>
+      <circle cx="6" cy="-2" r="3" fill="#ffffff"/>
+      <rect x="-8" y="6" width="16" height="4" rx="2" fill="#ffffff"/>
+    </g>
+  </g>
+</svg>
